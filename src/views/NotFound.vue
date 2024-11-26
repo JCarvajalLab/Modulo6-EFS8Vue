@@ -2,7 +2,7 @@
   <div class="container" style="text-align: center;">
     <h1 style="color: red;">Lo que buscas aquí no está</h1>
     <p style="color: aliceblue;">{{ route }}</p>
-    <img src="../assets/logo.png" alt="Not Found" style="max-width: 100%; height: auto;" />
+    <img src="../assets/logo.png" alt="Not Found" style="max-width: 100%; height: 400px;" />
   </div>
 </template>
 
