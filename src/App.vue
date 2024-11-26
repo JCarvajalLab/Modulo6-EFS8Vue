@@ -13,23 +13,35 @@
         </li>         
       </ul>
       <!-- <img :src="imageUrl" alt="Descripción de la imagen" /> -->
-      <router-view/>
+      <page-transition name="fade">
+        <RouterView />
+      </page-transition>
     </div>
   </div>
 </template>
 
 
 <script>
-/*  export default {
-        data() {
-    return {
-      imageUrl: 'https://brandemia.org/contenido/subidas/2021/05/portada-starwars-imagenes-brandemia-blog-1000x670.jpg'
-    };
-  }
-}*/
 </script>
 
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -84,4 +96,6 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
 </style>
